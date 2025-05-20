@@ -4,6 +4,7 @@ Este es un dashboard interactivo desarrollado con Flask que permite visualizar d
 
 ## 📊 Visualizaciones Incluidas
 
+- **Gráfico de barra**: Cantidad de Energía Producida Por Cada Fuente Renovable.
 - **Gráfico de Torta**: Participación de energías renovables (solar, eólica, hidro, biomasa) en el consumo total.
 - **Gráfico de Líneas**: Tendencia histórica de la capacidad instalada por tipo de fuente renovable.
 - **Gráfico de Área**: Comparación entre consumo de energía renovable y convencional a lo largo del tiempo.
