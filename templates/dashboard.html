@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Energético</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo">
+            <h1  class="logo__nombre no-margin centrar-texto">Dashboard de<span class="logo__bold">Producción Energética</span></h1>
+            </a>
+
+            <nav class="navegacion">
+                <a href="/" class="navegacion__enlace"> Inicio</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__texto">
+        <h2 class="no-margin">Informaciones sobre las cantidades producidas de energía</h2>
+        <p class="no-margin">Conoce un poco más gracias a las graficas</p>
+    </div> 
+</header>
+
+<main class="graficos">
+    <h2>Cantidad de Energía Producida Por Cada Fuente Renovable</h2>
+    <p>
+        Esta gráfica muestra la cantidad total de energía generada por cada fuente renovable, como solar, eólica, hidroeléctrica y biomasa. Permite comparar el aporte de cada tecnología al mix energético y visualizar cuáles son las fuentes más utilizadas en la producción de energía renovable.
+    </p>
+    <canvas id="barChart"></canvas>
+
+    <h2>Participación de Energías Renovables (Último Año)</h2>
+    <p>
+        El gráfico de torta ilustra la proporción que representa cada fuente renovable en el año más reciente con datos disponibles. Es útil para entender la distribución actual de la generación renovable y la importancia relativa de cada tecnología en el contexto energético nacional.
+    </p>
+    <canvas id="pieChart"></canvas>
+
+    <h2>Tendencia en la Capacidad Instalada (Generación por Tipo)</h2>
+    <p>
+        Esta gráfica de líneas muestra la evolución histórica de la capacidad instalada de generación renovable por tipo de fuente. Permite identificar tendencias de crecimiento, estancamiento o disminución en la adopción de tecnologías renovables a lo largo del tiempo.
+    </p>
+    <canvas id="lineChart"></canvas>
+
+    <h2>Comparación entre Fuentes Renovables</h2>
+    <p>
+        El gráfico de área compara el comportamiento de las diferentes fuentes renovables a lo largo de los años, mostrando cómo han variado sus aportes relativos y absolutos. Es útil para analizar el desarrollo conjunto de las energías renovables y su impacto en la matriz energética.
+    </p>
+    <canvas id="areaChart"></canvas>
+
+    <script>
+        const pieData = {{ pie_data|tojson }};
+        const lineData = {{ line_data|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</main> 
+
+<footer class="footer">   
+        <p>&copy;Todos los derechos reservados a talentotech2</p>
+</footer>  
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

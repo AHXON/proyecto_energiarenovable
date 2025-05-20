@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Energía Solar - Transición Energética</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin"  as="font" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo">
+                <h1  class="logo__nombre no-margin centrar-texto">Transición<span class="logo__bold">Energetica</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="/dashboard" class="navegacion__enlace"> Ver Gráficas</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Informaciones sobre las cantidades producidas de energía</h2>
+            <p class="no-margin">Conoce un poco más gracias a las graficas</p>
+        </div> 
+    </header>
+    
+    <main>
+        <h2>Las energías renovables </h2>
+        <p>son fuentes de energía que se obtienen de recursos naturales capaces de regenerarse de manera continua, 
+            como el sol, el viento, el agua y la biomasa. Son alternativas limpias y sostenibles que ayudan a reducir
+            la contaminación y el impacto ambiental, 
+            contribuyendo a un futuro más saludable para el planeta.</p> 
+    </main>
+
+
+    <section class="overview-cards">
+        <div class="container">
+            <h2>Panorama de Energías Renovables</h2>
+            <p>Colombia posee un gran potencial para el desarrollo de energías renovables gracias a su ubicación geográfica privilegiada, abundantes recursos hídricos, alta radiación solar y condiciones de viento favorables en varias regiones. El gobierno colombiano ha establecido políticas claras para incentivar la transición hacia una matriz energética más limpia y sostenible.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='img/eolica.jpeg') }}" alt="Energía Eólica">
+                    </div>
+                    <div class="card-content">
+                        <h3>Energía Eólica</h3>
+                        <p>Las regiones costeras del norte del país, especialmente La Guajira, cuentan con velocidades de viento superiores a 9 m/s, siendo uno de los mejores potenciales de América Latina para este tipo de energía.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='img/paneles-solares.jpg') }}" alt="Energía Solar">
+                    </div>
+                    <div class="card-content">
+                        <h3>Energía Solar</h3>
+                        <p>La energía solar aprovecha la radiación del sol para generar electricidad mediante paneles fotovoltaicos. Es una fuente limpia, inagotable y cada vez más accesible, ideal para zonas con alta radiación solar como gran parte del territorio colombiano. Su adopción contribuye a reducir emisiones contaminantes y a diversificar la matriz energética del país.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='img/energia-biomasa.jpeg') }}" alt="Biomasa">
+                    </div>
+                    <div class="card-content">
+                        <h3>Biomasa</h3>
+                        <p>La rica biodiversidad y el sector agroindustrial de Colombia generan grandes cantidades de residuos orgánicos que pueden ser aprovechados para la generación de energía sostenible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="stats">
+        <div class="container">
+            <h2>Porcentajes de Beneficio</h2>
+            <p>Las energías renovables han mostrado un crecimiento significativo en Colombia, generando múltiples beneficios económicos, sociales y ambientales. A continuación se presentan algunos indicadores clave:</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">68%</div>
+                    <p>Reducción de costos en energía solar fotovoltaica desde 2015</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">25%</div>
+                    <p>Objetivo de participación de energías renovables no convencionales en la matriz energética para 2030</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">45%</div>
+                    <p>Ahorro energético en comunidades rurales con implementación de sistemas renovables</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">30%</div>
+                    <p>Incremento en empleos verdes desde la implementación de la Ley 1715 de 2014</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="environmental-benefits">
+        <div class="container">
+            <h2>Beneficios Ambientales</h2>
+            <p>La implementación de energías renovables ha contribuido significativamente a la reducción del impacto ambiental y la mitigación del cambio climático en Colombia:</p>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">CO₂</div>
+                <div>
+                    <h3>Reducción de Emisiones</h3>
+                    <p>Las energías renovables han permitido reducir las emisiones de CO₂ en aproximadamente 3.5 millones de toneladas anuales, equivalente a retirar 750,000 vehículos de circulación.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">H₂O</div>
+                <div>
+                    <h3>Conservación del Agua</h3>
+                    <p>A diferencia de las plantas de generación térmica, las energías solar y eólica requieren hasta un 95% menos de agua para su operación, contribuyendo a preservar este recurso vital.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">O₂</div>
+                <div>
+                    <h3>Mejora de la Calidad del Aire</h3>
+                    <p>La sustitución de combustibles fósiles ha reducido en un 38% las emisiones de partículas contaminantes, mejorando la calidad del aire especialmente en zonas urbanas.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">♻️</div>
+                <div>
+                    <h3>Economía Circular</h3>
+                    <p>Los proyectos de biomasa han permitido aprovechar más de 800,000 toneladas de residuos agrícolas anuales, transformándolos en energía limpia y reduciendo la presión sobre los rellenos sanitarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">   
+            <p>&copy;Todos los derechos reservados a talentotech2</p>
+    </footer>
+
+</body>
+</html>
