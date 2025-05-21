@@ -22,3 +22,4 @@ Este es un dashboard interactivo desarrollado con Flask que permite visualizar d
    ```bash
    git clone https://github.com/AHXON/proyecto_energiarenovable.git
    cd proyecto_energiarenovable
+   para ejecutar el proyecto abre la terminal desde visual studio code y pone lo siguiente "python app.py" ya solo queda dar (ctrl + click) a la ruta que te brindan para poder acceder a la pagina.
